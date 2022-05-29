@@ -3,7 +3,7 @@ import plotly.express as px
 
 import pandas as pd
 
-data = pd.read_csv('Factors.csv')
+data = pd.read_csv('https://raw.githubusercontent.com/orectique/unrest-mapping-beta/main/Factors.csv')
 upperYear = data['Year'].max()
 lowerYear = data['Year'].min()
 
