@@ -8,5 +8,5 @@ enableCORS = false\n\
 [theme]\n\
 base=\"light\"\n\
 primaryColor=\"#778da9\"\n\
-font=\"sans serif\"\n\
+font=\"serif\"\n\
 " > ~/.streamlit/config.toml
