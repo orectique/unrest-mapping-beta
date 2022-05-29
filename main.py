@@ -32,16 +32,15 @@ with st.sidebar.form('filters'):
 
 with body:
     if submit:
-        
         if len(list(countries)) == 0:
             st.write('Please select at least one country')
             df0 = pd.DataFrame({"Unrest Severity":[], "Unrest Intensity": []})
-            fig = px.scatter(df0, x="Unrest Severity", y="Unrest Intensity", title = "UEM Across Years")
+            fig = px.scatter(df0, x="Unrest Severity", y="Unrest Intensity", template = 'seaborn', title = "UEM Across Years")
 
         else: 
             df = data[data['Country'].isin(countries)]
             df = df[df['Year'].between(lowYear, upYear)]
-            fig = px.scatter(df, x="Unrest Severity", y="Unrest Intensity", color = 'Country', hover_data=['Year'], title = "UEM Across Years")
+            fig = px.scatter(df, x="Unrest Severity", y="Unrest Intensity", color = 'Country', template = 'seaborn', hover_data=['Year'], title = "UEM Across Years")
 
         fig.update_xaxes(range=[-7, 7])
         fig.update_yaxes(range=[-2, 3.5])
