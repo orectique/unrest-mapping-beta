@@ -3,7 +3,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 import pandas as pd
-import random
 
 data = pd.read_csv('Factors.csv')
 upperYear = data['Year'].max()
